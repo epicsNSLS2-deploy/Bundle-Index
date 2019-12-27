@@ -49,6 +49,9 @@ else:
             print('Bundle Information:\n\nVariable|Value\n------|--------')
             for key in build_info_table.keys():
                 print('{}|{}'.format(key, build_info_table[key]))
+            print('\nTo regenerate sources used to build the bundle, use the following commands:')
+            print('```\ngit clone https://github.com/epicsNSLS2-deploy/installSynApps && cd installSynApps\ngit checkout -q {}\npython3 -u installCLI.py -c {} -p'.format(build_info_table['installSynApps Version'], build_info_table['Build Config Path']))
+            print('```\nMake sure to have Python {} installed, and be running on a {} machine'.format(build_info_table['Python 3 Version'], build_info_table['OS Class']))
             print('\nModules and Versions Included:\n\nModule Name|Module Version\n-------|----------')
 
             for module in bundle_modules_table.keys():

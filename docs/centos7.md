@@ -16,6 +16,14 @@ Python 3 Version|3.6.8
 OS Class|centos_7
 Build Date|2019-11-27 16:04:41.015045
 
+To regenerate sources used to build the bundle, use the following commands:
+```
+git clone https://github.com/epicsNSLS2-deploy/installSynApps && cd installSynApps
+git checkout -q R2-2-76-g0d17e9b
+python3 -u installCLI.py -c `/ad-nfs/epics/production/R3-8/CentOS7/build-config` -p
+```
+Make sure to have Python 3.6.8 installed, and be running on a centos_7 machine
+
 Modules and Versions Included:
 
 Module Name|Module Version
