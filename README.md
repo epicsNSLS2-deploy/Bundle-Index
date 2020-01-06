@@ -6,8 +6,19 @@ https://epicsnsls2-deploy.github.io/Bundle-Index
 
 ### Adding Bundle Info
 
-To add additional bundle information to the website, please use the included python script (Requires python3).
-Simply run the script with the path to the target bundle as the parameter. For example:
+The easiest way to update the site is to run the `auto_update_and_deploy.sh` script as follows:
+```
+./auto_update_and_deploy.sh /ad-nfs/epics/production
+```
+Replacing the argument path if the root directory of your bundles is in a different location. Be sure that bundles are generated correctly before running.
+
+Alternatively, you may add documentation one `ADCore` release at a time:
+```
+./mass_update_docs.py /ad-nfs/epics/production/R3-8
+```
+would add docs for `ADCore` R3-8. 
+
+The final option is to manually get the markdown for each bundle as follows:
 ```
 ./grab_bundle_markdown.py /ad-nfs/epics/production/R3-8/CentOS7/
 ```
