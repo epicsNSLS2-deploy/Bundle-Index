@@ -136,7 +136,7 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="centos-7-bundles">CentOS 7 Bundles</h1>
-<p>Below is a list of all bundles available for CentOS 7, including included modules and versions, locations, and build configurations and settings.</p>
+<p>Below is a list o all bundles available for CentOS 7, including included modules and versions, locations, and build configurations and settings.</p>
 <h3 id="adcore-r3-8">ADCore R3-8</h3>
 <p>Bundle Information:</p>
 <table>
@@ -178,9 +178,9 @@
 </tbody>
 </table>
 <p>To regenerate sources used to build the bundle, use the following commands:</p>
-<pre><code>git clone https://github.com/epicsNSLS2-deploy/installSynApps &amp;&amp; cd installSynApps
-git checkout -q R2-2-76-g0d17e9b
-python3 -u installCLI.py -c `/ad-nfs/epics/production/R3-8/CentOS7/build-config` -p
+<pre><code class="bash">git clone https://github.com/epicsNSLS2-deploy/installSynApps &amp;&amp; cd installSynApps
+git checkout 0d17e9be9fa67485ef4cbf17be970ffc01cd5d4b
+python3 -u installCLI.py -c /ad-nfs/epics/production/R3-8/CentOS7/build-config -p
 </code></pre>
 
 <p>Make sure to have Python 3.6.8 installed, and be running on a centos_7 machine</p>
@@ -336,7 +336,7 @@ python3 -u installCLI.py -c `/ad-nfs/epics/production/R3-8/CentOS7/build-config`
 </tbody>
 </table>
 <p>To regenerate sources used to build the bundle, use the following commands:</p>
-<pre><code>git clone https://github.com/epicsNSLS2-deploy/installSynApps &amp;&amp; cd installSynApps
+<pre><code class="bash">git clone https://github.com/epicsNSLS2-deploy/installSynApps &amp;&amp; cd installSynApps
 git checkout 6bed0aac9cf411495714f876a5af8ad7fc8b537a
 python3 -u installCLI.py -c /ad-nfs/epics/production/R3-9/CentOS7/build-config -p
 </code></pre>

@@ -136,9 +136,9 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="debian-8-bundles">Debian 8 Bundles</h1>
-<p>Below is a list of all bundles available for Debian 8, including included modules and versions, locations, and build configurations and settings.</p>
+<p>Below is a list o all bundles available for Debian 8, including included modules and versions, locations, and build configurations and settings.</p>
 <h3 id="adcore-r3-8">ADCore R3-8</h3>
-<p>Bundle information:</p>
+<p>Bundle Information:</p>
 <table>
 <thead>
 <tr>
@@ -152,28 +152,32 @@
 <td><code>/ad-nfs/epics/production/R3-8/Debian8</code></td>
 </tr>
 <tr>
-<td>Build Python Version</td>
-<td>3.4.2</td>
-</tr>
-<tr>
-<td>Bundle Name</td>
-<td><code>NSLS2_AD_R3-8_Bin_debian_8_2019-10-22</code></td>
-</tr>
-<tr>
 <td>Build Date</td>
 <td>2019-10-22</td>
 </tr>
+<tr>
+<td>OS Class</td>
+<td>debian_8</td>
+</tr>
 </tbody>
 </table>
-<p>Versions used in this deployment:</p>
+<p>Modules and Versions Included:</p>
 <table>
 <thead>
 <tr>
-<th>[folder name]</th>
-<th>[git tag]</th>
+<th>Module Name</th>
+<th>Module Version</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Versions used in this deployment</td>
+<td></td>
+</tr>
+<tr>
+<td>[folder name]</td>
+<td>[git tag]</td>
+</tr>
 <tr>
 <td>base</td>
 <td>R7.0.3</td>
@@ -317,7 +321,7 @@
 </tbody>
 </table>
 <p>To regenerate sources used to build the bundle, use the following commands:</p>
-<pre><code>git clone https://github.com/epicsNSLS2-deploy/installSynApps &amp;&amp; cd installSynApps
+<pre><code class="bash">git clone https://github.com/epicsNSLS2-deploy/installSynApps &amp;&amp; cd installSynApps
 git checkout 6bed0aac9cf411495714f876a5af8ad7fc8b537a
 python3 -u installCLI.py -c /ad-nfs/epics/production/R3-9/Debian8/build-config -p
 </code></pre>
