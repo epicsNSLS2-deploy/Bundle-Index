@@ -130,6 +130,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#debian-8-bundles">Debian 8 Bundles</a></li>
             <li><a href="#adcore-r3-8">ADCore R3-8</a></li>
+            <li><a href="#adcore-r3-9">ADCore R3-9</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -272,6 +273,164 @@
 <tr>
 <td>ADURL</td>
 <td>R2-2-10-gb522aba</td>
+</tr>
+</tbody>
+</table>
+<h3 id="adcore-r3-9">ADCore R3-9</h3>
+<p>Bundle Information:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td><code>/ad-nfs/epics/production//./R3-9/Debian8</code></td>
+</tr>
+<tr>
+<td>Build Config Path</td>
+<td><code>/ad-nfs/epics/production//./R3-9/Debian8/build-config</code></td>
+</tr>
+<tr>
+<td>Bundle Name</td>
+<td><code>NSLS2_AD_R3-9_Bin_debian_8_2020-02-25</code></td>
+</tr>
+<tr>
+<td>installSynApps Version</td>
+<td>R2-4-6-g6bed0aa</td>
+</tr>
+<tr>
+<td>Python 3 Version</td>
+<td>3.4.2</td>
+</tr>
+<tr>
+<td>OS Class</td>
+<td>debian_8</td>
+</tr>
+<tr>
+<td>Build Date</td>
+<td>2020-02-25 10:20:22.370119</td>
+</tr>
+</tbody>
+</table>
+<p>To regenerate sources used to build the bundle, use the following commands:</p>
+<pre><code>git clone https://github.com/epicsNSLS2-deploy/installSynApps &amp;&amp; cd installSynApps
+git checkout 6bed0aac9cf411495714f876a5af8ad7fc8b537a
+python3 -u installCLI.py -c /ad-nfs/epics/production//./R3-9/Debian8/build-config -p
+</code></pre>
+
+<p>Make sure to have Python 3.4.2 installed, and be running on a debian_8 machine</p>
+<p>Modules and Versions Included:</p>
+<table>
+<thead>
+<tr>
+<th>Module Name</th>
+<th>Module Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>base</td>
+<td>R7.0.3.1</td>
+</tr>
+<tr>
+<td>seq</td>
+<td>2.2.6</td>
+</tr>
+<tr>
+<td>autosave</td>
+<td>R5-10</td>
+</tr>
+<tr>
+<td>asyn</td>
+<td>R4-39</td>
+</tr>
+<tr>
+<td>sscan</td>
+<td>R2-11-3</td>
+</tr>
+<tr>
+<td>std</td>
+<td>R3-6-1</td>
+</tr>
+<tr>
+<td>iocStats</td>
+<td>3.1.16</td>
+</tr>
+<tr>
+<td>calc</td>
+<td>R3-7-3</td>
+</tr>
+<tr>
+<td>stream</td>
+<td>2.8.9</td>
+</tr>
+<tr>
+<td>busy</td>
+<td>R1-7-2</td>
+</tr>
+<tr>
+<td>modbus</td>
+<td>R3-0-RC1</td>
+</tr>
+<tr>
+<td>xspress3</td>
+<td>1-11-208-g2783e44</td>
+</tr>
+<tr>
+<td>quadEM</td>
+<td>R9-2-1</td>
+</tr>
+<tr>
+<td>ADSupport</td>
+<td>R1-9</td>
+</tr>
+<tr>
+<td>ADCore</td>
+<td>R3-9</td>
+</tr>
+<tr>
+<td>ADUVC</td>
+<td>R1-3</td>
+</tr>
+<tr>
+<td>ADAndor3</td>
+<td>R2-2-11-gb5a0d98</td>
+</tr>
+<tr>
+<td>ADGenICam</td>
+<td>R1-3</td>
+</tr>
+<tr>
+<td>ADProsilica</td>
+<td>R2-5</td>
+</tr>
+<tr>
+<td>ADSimDetector</td>
+<td>R2-10</td>
+</tr>
+<tr>
+<td>ADPilatus</td>
+<td>R2-9</td>
+</tr>
+<tr>
+<td>ADMerlin</td>
+<td>R4-1-4-gab6ec75</td>
+</tr>
+<tr>
+<td>ADEiger</td>
+<td>R2-6</td>
+</tr>
+<tr>
+<td>ADPointGrey</td>
+<td>R2-9</td>
+</tr>
+<tr>
+<td>ADURL</td>
+<td>R2-2-19-g35a26df</td>
 </tr>
 </tbody>
 </table></div>
