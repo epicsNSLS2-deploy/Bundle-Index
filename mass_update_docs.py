@@ -82,7 +82,7 @@ def create_distro_objects(top_path):
 def get_distro_intro_message(distro):
 
     out = '# {} Bundles\n\n'.format(distro_titles[distro])
-    out = out + 'Below is a list o all bundles available for {}, including included modules and versions, locations, and build configurations and settings.\n\n'.format(distro_titles[distro])
+    out = out + 'Below is a list of all bundles available for {}, including included modules and versions, locations, and build configurations and settings.\n\n'.format(distro_titles[distro])
     return out
 
 
