@@ -52,8 +52,8 @@ Bundle Information:
 
 Variable|Value
 ------|--------
-Location|`/ad-nfs/epics/production//./R3-9/Debian8`
-Build Config Path|`/ad-nfs/epics/production//./R3-9/Debian8/build-config`
+Location|`/ad-nfs/epics/production/R3-9/Debian8`
+Build Config Path|`/ad-nfs/epics/production/R3-9/Debian8/build-config`
 Bundle Name|`NSLS2_AD_R3-9_Bin_debian_8_2020-02-25`
 installSynApps Version|R2-4-6-g6bed0aa
 Python 3 Version|3.4.2
@@ -64,7 +64,7 @@ To regenerate sources used to build the bundle, use the following commands:
 ```
 git clone https://github.com/epicsNSLS2-deploy/installSynApps && cd installSynApps
 git checkout 6bed0aac9cf411495714f876a5af8ad7fc8b537a
-python3 -u installCLI.py -c /ad-nfs/epics/production//./R3-9/Debian8/build-config -p
+python3 -u installCLI.py -c /ad-nfs/epics/production/R3-9/Debian8/build-config -p
 ```
 Make sure to have Python 3.4.2 installed, and be running on a debian_8 machine
 
