@@ -1,6 +1,6 @@
 # CentOS 7 Bundles
 
-Below is a list of all bundles available for CentOS 7, including included modules and versions, locations, and build configurations and settings.
+Below is a list o all bundles available for CentOS 7, including included modules and versions, locations, and build configurations and settings.
 
 ### ADCore R3-8
 
@@ -17,10 +17,10 @@ OS Class|centos_7
 Build Date|2019-11-27 16:04:41.015045
 
 To regenerate sources used to build the bundle, use the following commands:
-```
+```bash
 git clone https://github.com/epicsNSLS2-deploy/installSynApps && cd installSynApps
-git checkout -q R2-2-76-g0d17e9b
-python3 -u installCLI.py -c `/ad-nfs/epics/production/R3-8/CentOS7/build-config` -p
+git checkout 0d17e9be9fa67485ef4cbf17be970ffc01cd5d4b
+python3 -u installCLI.py -c /ad-nfs/epics/production/R3-8/CentOS7/build-config -p
 ```
 Make sure to have Python 3.6.8 installed, and be running on a centos_7 machine
 
@@ -55,7 +55,6 @@ ADVimba|R1-0
 ADURL|R2-2-10-gb522aba
 
 
-
 ### ADCore R3-9
 
 Bundle Information:
@@ -71,7 +70,7 @@ OS Class|centos_7
 Build Date|2020-02-25 10:40:25.092761
 
 To regenerate sources used to build the bundle, use the following commands:
-```
+```bash
 git clone https://github.com/epicsNSLS2-deploy/installSynApps && cd installSynApps
 git checkout 6bed0aac9cf411495714f876a5af8ad7fc8b537a
 python3 -u installCLI.py -c /ad-nfs/epics/production/R3-9/CentOS7/build-config -p
@@ -107,4 +106,5 @@ ADMerlin|R4-1-4-gab6ec75
 ADPointGrey|R2-9
 ADVimba|R1-1-6-ge3ebad8
 ADURL|R2-2-19-g35a26df
+
 

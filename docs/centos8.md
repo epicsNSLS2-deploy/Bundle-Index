@@ -1,8 +1,6 @@
 # CentOS 8 Bundles
 
-Below is a list of all bundles available for CentOS 8, including included modules and versions, locations, and build configurations and settings.
-
-
+Below is a list o all bundles available for CentOS 8, including included modules and versions, locations, and build configurations and settings.
 
 ### ADCore R3-8
 
@@ -19,7 +17,7 @@ OS Class|centos_8
 Build Date|2019-12-27 21:53:04.469329
 
 To regenerate sources used to build the bundle, use the following commands:
-```
+```bash
 git clone https://github.com/epicsNSLS2-deploy/installSynApps && cd installSynApps
 git checkout eb1c1bf23ffeafba9a61610bdc678b4ee85e8dc2
 python3 -u installCLI.py -c /ad-nfs/epics/production/R3-8/CentOS8/build-config -p
@@ -58,7 +56,6 @@ ADPointGrey|R2-8
 ADURL|R2-2-10-gb522aba
 
 
-
 ### ADCore R3-9
 
 Bundle Information:
@@ -74,7 +71,7 @@ OS Class|centos_8
 Build Date|2020-02-25 10:47:01.882049
 
 To regenerate sources used to build the bundle, use the following commands:
-```
+```bash
 git clone https://github.com/epicsNSLS2-deploy/installSynApps && cd installSynApps
 git checkout 6bed0aac9cf411495714f876a5af8ad7fc8b537a
 python3 -u installCLI.py -c /ad-nfs/epics/production/R3-9/CentOS8/build-config -p
@@ -111,4 +108,5 @@ ADPilatus|R2-9
 ADMerlin|R4-1-4-gab6ec75
 ADPointGrey|R2-9
 ADURL|R2-2-19-g35a26df
+
 
