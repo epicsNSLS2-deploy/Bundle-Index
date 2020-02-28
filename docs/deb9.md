@@ -107,3 +107,85 @@ ADVimba|R1-1-6-ge3ebad8
 ADURL|R2-2-19-g35a26df
 
 
+### ADCore R3-7
+
+Bundle Information:
+
+Variable|Value
+------|--------
+Location|`/ad-nfs/epics/production/R3-7/Debian9`
+Build Date|2019-08-20
+OS Class|debian_9
+
+Modules and Versions Included:
+
+Module Name|Module Version
+-------|----------
+Versions used in this deployment|
+[folder name]|[git tag]
+base|R7.0.3
+asyn|R4-36
+autosave|R5-10
+busy|R1-7
+calc|R3-7-3
+iocStats|3.1.16
+seq|R6-1
+sscan|R2-11-3
+stream|2.8.9
+modbus|R3-0
+motor|R7-1
+std|R3-6
+xspress3|1-11-176-g750cd39
+quadEM|R9-2
+ADCore|R3-7
+ADSupport|R1-9
+ADUVC|R1-2
+ADAndor3|R2-2-11-gb5a0d98
+ADGenICam|R1-0
+ADProsilica|R2-5
+ADSimDetector|R2-9
+ADPilatus|R2-7
+ADMerlin|R4-1-1-ga0c19c9
+ADPointGrey|R2-8
+ADURL|R2-2-10-gb522aba
+
+
+### ADCore R3-6
+
+Bundle Information:
+
+Variable|Value
+------|--------
+Location|`/ad-nfs/epics/production/R3-6/Debian9`
+Build Date|2019-07-29
+OS Class|debian_9
+
+Modules and Versions Included:
+
+Module Name|Module Version
+-------|----------
+Versions used in this deployment|
+[folder name]|[git tag]
+base|R7.0.2.2
+asyn|R4-35
+autosave|R5-9
+busy|R1-7
+calc|R3-7-2
+iocStats|3.1.15
+seq|R6-0
+sscan|R2-11-1
+std|R3-5
+ADCore|R3-6
+ADSupport|R1-8
+ADUVC|R1-2
+ADAndor3|R2-2-11-gb5a0d98
+ADProsilica|R2-5
+ADSimDetector|R2-9
+ADPilatus|R2-7
+ADMerlin|R4-1-1-ga0c19c9
+ADPointGrey|R2-8
+ADURL|R2-2-10-gb522aba
+
+
+
+

@@ -96,9 +96,9 @@ def grab_bundle_markdown(bundle_path):
                     print('Detected and parsed legacy README file in {}'.format(bundle_path))
                 except:
                     print('Could not successfully parse README file in bundle {}'.format(bundle_path))
-                    file_fp = open(os.path.join(bundle_path, file), 'r')
-                    markdown_str = '### Unknown Bundle Version\n\n' + file_fp.read()
-                    file_fp.close()
+#                    file_fp = open(os.path.join(bundle_path, file), 'r')
+#                    markdown_str = '### Unknown Bundle Version\n\n' + file_fp.read()
+#                    file_fp.close()
             break
 
     return markdown_str
