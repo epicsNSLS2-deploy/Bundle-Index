@@ -3,6 +3,8 @@
 import os
 import argparse
 
+PRINT_DEBUG=False
+
 def parse_readme_file(filepath):
     build_info_table = {}
     bundle_modules_table = {}
@@ -12,6 +14,7 @@ def parse_readme_file(filepath):
     if os.path.exists(os.path.join(bundle_path, 'build-config')):
         build_info_table['Build Config Path'] = '`{}`'.format(os.path.join(bundle_path, 'build-config'))
 
+    debug('Found build config: {}'.format(os.path.join(bundle_path, 'build-config')))
     build_info_list = ['installSynApps Version', 'Python 3 Version', 'OS Class', 'Build Date']
     lines = fp.readlines()
     isa_checkout_command = 'git checkout master'
@@ -20,8 +23,10 @@ def parse_readme_file(filepath):
         if not in_mod_list:
             if line.startswith('# Bundle - '):
                 build_info_table['Bundle Name'] = '`{}`'.format(line.split('-',1)[1].strip()[:-1].strip())
-            elif line.startswith('[folder name]'):
+                debug('Bundle Name: {}'.format(build_info_table['Bundle Name']))
+            elif line.startswith('[folder name]') or line.startswith('[module name]'):
                 in_mod_list = True
+                debug('Entered module list')
             elif line.split(':',1)[0] in build_info_list:
                 build_info_table[line.split(':',1)[0].strip()] = line.split(':',1)[1].strip()
             elif line.strip().startswith('git checkout'):
@@ -30,9 +35,13 @@ def parse_readme_file(filepath):
         else:
             if line.startswith('#'):
                 in_mod_list = False
+                debug('Leaving module list')
             elif '-' in line:
                 bundle_modules_table[line.split('-',1)[0].strip()] = line.split('-',1)[1].strip()
+                debug('Parsing module line: {}'.format(line.strip()))
 
+    debug('Finished parsing default README file')
+    debug('Info: {}\nModules: {}\nCheckout Cmd: {}'.format(str(build_info_table), str(bundle_modules_table), isa_checkout_command))
     fp.close()
     return build_info_table, bundle_modules_table, isa_checkout_command
 
@@ -67,9 +76,13 @@ def grab_bundle_markdown(bundle_path):
     markdown_str = ''
     for file in os.listdir(bundle_path):
         if file.startswith('README'):
+            debug('Found README file: {}'.format(file))
             try:
                 build_info_table, bundle_modules_table, checkout_command = parse_readme_file(os.path.join(bundle_path, file))
-                markdown_str = markdown_str + '### ADCore {}\n\n'.format(bundle_modules_table['ADCore'])
+                ad_core_key = 'ADCore'
+                if ad_core_key not in bundle_modules_table:
+                    ad_core_key = ad_core_key.upper()
+                markdown_str = markdown_str + '### ADCore {}\n\n'.format(bundle_modules_table[ad_core_key])
                 markdown_str = markdown_str + 'Bundle Information:\n\nVariable|Value\n------|--------\n'
                 for key in build_info_table.keys():
                     markdown_str = markdown_str + '{}|{}\n'.format(key, build_info_table[key])
@@ -81,7 +94,9 @@ def grab_bundle_markdown(bundle_path):
                 for module in bundle_modules_table.keys():
                     markdown_str = markdown_str + '{}|{}\n'.format(module, bundle_modules_table[module])
                 print('Parsed README file for {}'.format(bundle_path))
-            except KeyError:
+            except KeyError as e:
+                debug(str(e))
+                debug('Failed to parse as default README file, attempting legacy parse...')
                 try:
                     build_info_table, bundle_modules_table = parse_legacy_readme_file(os.path.join(bundle_path, file))
                     markdown_str = markdown_str + '### ADCore {}\n\n'.format(bundle_modules_table['ADCore'])
@@ -104,11 +119,18 @@ def grab_bundle_markdown(bundle_path):
     return markdown_str
 
 
+def debug(msg):
+    global PRINT_DEBUG
+    if PRINT_DEBUG:
+        print(msg)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='A helper script for generating markdown docs from bundle README files.')
     parser.add_argument('filepath', help='Absolute filepath to the target bundle')
+    parser.add_argument('-d', '--debug', action='store_true', help='Add print statements to debug README parsing')
     args = vars(parser.parse_args())
+    PRINT_DEBUG = args['debug']
     if not os.path.exists(args['filepath']):
         print('ERROR - path does not exist')
     elif os.path.isfile(args['filepath']):
