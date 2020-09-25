@@ -133,6 +133,7 @@
             <li><a href="#adcore-r3-9">ADCore R3-9</a></li>
             <li><a href="#adcore-r3-7">ADCore R3-7</a></li>
             <li><a href="#adcore-r3-6">ADCore R3-6</a></li>
+            <li><a href="#adcore-r3-10">ADCore R3-10</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -710,6 +711,168 @@ python3 -u installCLI.py -c /ad-nfs/epics/production/R3-9/Debian9/build-config -
 <tr>
 <td>ADURL</td>
 <td>R2-2-10-gb522aba</td>
+</tr>
+</tbody>
+</table>
+<h3 id="adcore-r3-10">ADCore R3-10</h3>
+<p>Bundle Information:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td><code>/ad-nfs/epics/production/R3-10/Debian9</code></td>
+</tr>
+<tr>
+<td>Build Config Path</td>
+<td><code>/ad-nfs/epics/production/R3-10/Debian9/build-config</code></td>
+</tr>
+<tr>
+<td>Bundle Name</td>
+<td><code>NSLS2_AD_R3-10_Prod_debian_9_2020-09-25</code></td>
+</tr>
+<tr>
+<td>installSynApps Version</td>
+<td>R2-6-29-gb5f2019</td>
+</tr>
+<tr>
+<td>Python 3 Version</td>
+<td>3.5.3</td>
+</tr>
+<tr>
+<td>OS Class</td>
+<td>debian_9</td>
+</tr>
+<tr>
+<td>Build Date</td>
+<td>2020-09-25 19:05:55.330289</td>
+</tr>
+</tbody>
+</table>
+<p>To regenerate sources used to build the bundle, use the following commands:</p>
+<pre><code class="bash">git clone https://github.com/epicsNSLS2-deploy/installSynApps &amp;&amp; cd installSynApps
+git checkout b5f201951ec052100579eb9c4733d2f153317733
+python3 -u installCLI.py -c /ad-nfs/epics/production/R3-10/Debian9/build-config -p
+</code></pre>
+
+<p>Make sure to have Python 3.5.3 installed, and be running on a debian_9 machine</p>
+<p>Modules and Versions Included:</p>
+<table>
+<thead>
+<tr>
+<th>Module Name</th>
+<th>Module Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EPICS_BASE</td>
+<td>R7.0.4.1-rc1</td>
+</tr>
+<tr>
+<td>SNCSEQ</td>
+<td>2.2.8</td>
+</tr>
+<tr>
+<td>AUTOSAVE</td>
+<td>R5-10-1</td>
+</tr>
+<tr>
+<td>SSCAN</td>
+<td>R2-11-3</td>
+</tr>
+<tr>
+<td>CALC</td>
+<td>R3-7-3</td>
+</tr>
+<tr>
+<td>ASYN</td>
+<td>R4-41</td>
+</tr>
+<tr>
+<td>STREAM</td>
+<td>2.8.9</td>
+</tr>
+<tr>
+<td>DEVIOCSTATS</td>
+<td>3.1.16</td>
+</tr>
+<tr>
+<td>BUSY</td>
+<td>R1-7-2</td>
+</tr>
+<tr>
+<td>MODBUS</td>
+<td>R3-1-6-g8929ff1</td>
+</tr>
+<tr>
+<td>MOTOR</td>
+<td>R7-2-1</td>
+</tr>
+<tr>
+<td>STD</td>
+<td>R3-6-1</td>
+</tr>
+<tr>
+<td>ADSUPPORT</td>
+<td>R1-9</td>
+</tr>
+<tr>
+<td>ADCORE</td>
+<td>R3-10</td>
+</tr>
+<tr>
+<td>QUADEM</td>
+<td>R9-3</td>
+</tr>
+<tr>
+<td>XSPRESS3</td>
+<td>2-4-1-g5700f67</td>
+</tr>
+<tr>
+<td>ADANDOR3</td>
+<td>R2-2-11-gb5a0d98</td>
+</tr>
+<tr>
+<td>ADUVC</td>
+<td>R1-4</td>
+</tr>
+<tr>
+<td>ADGENICAM</td>
+<td>R1-5</td>
+</tr>
+<tr>
+<td>ADPROSILICA</td>
+<td>R2-5</td>
+</tr>
+<tr>
+<td>ADSIMDETECTOR</td>
+<td>R2-10-18-gd24fa04</td>
+</tr>
+<tr>
+<td>ADPILATUS</td>
+<td>R2-9</td>
+</tr>
+<tr>
+<td>ADMERLIN</td>
+<td>R4-1-4-gab6ec75</td>
+</tr>
+<tr>
+<td>ADPOINTGREY</td>
+<td>R2-9</td>
+</tr>
+<tr>
+<td>ADVIMBA</td>
+<td>R1-2-1-g84936bc</td>
+</tr>
+<tr>
+<td>ADURL</td>
+<td>R2-2-23-g031794e</td>
 </tr>
 </tbody>
 </table></div>

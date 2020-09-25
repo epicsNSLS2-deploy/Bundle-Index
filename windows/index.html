@@ -129,12 +129,155 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#windows-bundles">Windows Bundles</a></li>
+            <li><a href="#adcore-r3-9">ADCore R3-9</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="windows-bundles">Windows Bundles</h1>
-<p>Below is a list of all bundles available for Windows, including included modules and versions, locations, and build configurations and settings.</p></div>
+<p>Below is a list of all bundles available for Windows, including included modules and versions, locations, and build configurations and settings.</p>
+<h3 id="adcore-r3-9">ADCore R3-9</h3>
+<p>Bundle Information:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td><code>/ad-nfs/epics/production/R3-9/Windows</code></td>
+</tr>
+<tr>
+<td>Build Config Path</td>
+<td><code>/ad-nfs/epics/production/R3-9/Windows/build-config</code></td>
+</tr>
+<tr>
+<td>Bundle Name</td>
+<td><code>NSLS2_AD_R3-9_Prod_windows-x64-static_2020-07-13</code></td>
+</tr>
+<tr>
+<td>installSynApps Version</td>
+<td>R2-6-16-g5f94b54</td>
+</tr>
+<tr>
+<td>Python 3 Version</td>
+<td>3.8.3</td>
+</tr>
+<tr>
+<td>OS Class</td>
+<td>Windows</td>
+</tr>
+<tr>
+<td>Build Date</td>
+<td>2020-07-13 14:56:31.706234</td>
+</tr>
+</tbody>
+</table>
+<p>To regenerate sources used to build the bundle, use the following commands:</p>
+<pre><code class="bash">git clone https://github.com/epicsNSLS2-deploy/installSynApps &amp;&amp; cd installSynApps
+git checkout 5f94b54e2bc21d47a214f0b7dc7516a7270425fc
+python3 -u installCLI.py -c /ad-nfs/epics/production/R3-9/Windows/build-config -p
+</code></pre>
+
+<p>Make sure to have Python 3.8.3 installed, and be running on a Windows machine</p>
+<p>Modules and Versions Included:</p>
+<table>
+<thead>
+<tr>
+<th>Module Name</th>
+<th>Module Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EPICS_BASE</td>
+<td>R7.0.4</td>
+</tr>
+<tr>
+<td>SNCSEQ</td>
+<td>2.2.7</td>
+</tr>
+<tr>
+<td>IPAC</td>
+<td>2.15</td>
+</tr>
+<tr>
+<td>ASYN</td>
+<td>R4-39</td>
+</tr>
+<tr>
+<td>AUTOSAVE</td>
+<td>R5-10-1</td>
+</tr>
+<tr>
+<td>BUSY</td>
+<td>R1-7-2</td>
+</tr>
+<tr>
+<td>SSCAN</td>
+<td>R2-11-1</td>
+</tr>
+<tr>
+<td>CALC</td>
+<td>R3-7-2</td>
+</tr>
+<tr>
+<td>DEVIOCSTATS</td>
+<td>3.1.16</td>
+</tr>
+<tr>
+<td>ADSUPPORT</td>
+<td>R1-9</td>
+</tr>
+<tr>
+<td>ADCORE</td>
+<td>R3-9</td>
+</tr>
+<tr>
+<td>ADSPINNAKER</td>
+<td>R0.1beta-106-ge0bf1f6</td>
+</tr>
+<tr>
+<td>ADANDOR3</td>
+<td>R2-2-11-gb5a0d98</td>
+</tr>
+<tr>
+<td>ADPERKINELMER</td>
+<td>R2-9-6-gbbc467d</td>
+</tr>
+<tr>
+<td>ADPROSILICA</td>
+<td>R2-5</td>
+</tr>
+<tr>
+<td>ADSIMDETECTOR</td>
+<td>R2-10</td>
+</tr>
+<tr>
+<td>ADPILATUS</td>
+<td>R2-9</td>
+</tr>
+<tr>
+<td>ADMERLIN</td>
+<td>R4-1-4-gab6ec75</td>
+</tr>
+<tr>
+<td>ADPOINTGREY</td>
+<td>R2-9</td>
+</tr>
+<tr>
+<td>ADDEXELA</td>
+<td>R2-3</td>
+</tr>
+<tr>
+<td>ADURL</td>
+<td>R2-2-22-g8ea7846</td>
+</tr>
+</tbody>
+</table></div>
         </div>
 
         <footer class="col-md-12">
