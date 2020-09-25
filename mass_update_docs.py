@@ -13,6 +13,7 @@ md_files = {
     'Debian10' : 'deb10.md',
     'Ubuntu18' : 'ub1804.md',
     'Ubuntu19' : 'ub1904.md',
+    'Ubuntu20' : 'ub2004.md',
     'CentOS7' : 'centos7.md',
     'CentOS8' : 'centos8.md',
     'Windows' : 'windows.md'
@@ -26,6 +27,7 @@ distro_titles = {
     'Debian10' : 'Debian 10',
     'Ubuntu18' : 'Ubuntu 18.04',
     'Ubuntu19' : 'Ubuntu 19.04',
+    'Ubuntu20' : 'Ubuntu 20.04',
     'CentOS7' : 'CentOS 7',
     'CentOS8' : 'CentOS 8',
     'Windows' : 'Windows'
