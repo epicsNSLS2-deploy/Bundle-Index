@@ -106,7 +106,9 @@ def main():
 
         for distro in distros.keys():
             print('Processing bundles for distro {}'.format(distro_titles[distro]))
-            os.remove(os.path.join('docs', md_files[distro]))
+            doc_file_path = os.path.join('docs', md_files[distro]) 
+            if os.path.exists(doc_file_path):
+                os.remove(doc_file_path)
             target_md_file = os.path.join('docs', md_files[distro])
             target_fp = open(target_md_file, 'w')
             target_fp.write(get_distro_intro_message(distro))
