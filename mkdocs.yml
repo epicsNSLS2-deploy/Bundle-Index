@@ -1,6 +1,6 @@
 site_name: NSLS2 AD Bundle Index
 repo_url: https://github.com/epicsNSLS2-deploy/Bundle-Index
-copyright: 2019 - Brookhaven National Laboratory
+copyright: 2019-2020 - Brookhaven National Laboratory
 nav:
     - Home: index.md
     - Debian:
@@ -11,6 +11,7 @@ nav:
     - Ubuntu:
         - Ubuntu 18.04: ub1804.md
         - Ubuntu 19.04: ub1904.md
+        - Ubuntu 20.04: ub2004.md
     - CentOS:
         - CentOS 7: centos7.md
         - CentOS 8: centos8.md
